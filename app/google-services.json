@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "30112006261",
+    "project_id": "fishingindk",
+    "storage_bucket": "fishingindk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30112006261:android:6a3ba297e4cbd991bff83c",
+        "android_client_info": {
+          "package_name": "com.aliniacoban.fishingindenmark"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30112006261-el1j1tdillj4rk2jbdvjt1qr7ekqqqel.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABJkPNIDA1zW2yQpUBSYIZu32On4GySQw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30112006261-el1j1tdillj4rk2jbdvjt1qr7ekqqqel.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
