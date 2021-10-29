@@ -22,7 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.regex.Pattern;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView headlineRegister, registerButton;
+    TextView headlineRegister, registerButton, loginText;
     EditText registerUsername, registerPassword, registerEmail, registerConfirmPassword;
     ProgressBar progressBar;
 
@@ -38,7 +38,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         headlineRegister = (TextView) findViewById(R.id.registerHeadline);
         headlineRegister.setOnClickListener(this);
 
-        registerButton=(Button) findViewById(R.id.registerButton);
+        loginText = (TextView) findViewById(R.id.loginText);
+        loginText.setOnClickListener(this);
+
+        registerButton = (Button) findViewById(R.id.registerButton);
         registerButton.setOnClickListener(this);
 
         registerUsername = (EditText) findViewById(R.id.inputUsername);
@@ -46,101 +49,95 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         registerPassword = (EditText) findViewById(R.id.inputPassword);
         registerConfirmPassword = (EditText) findViewById(R.id.confirmPassword);
 
+
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
 
     }
+
     @Override
-    public void onClick(View v)
-    {
-        switch (v.getId()){
+    public void onClick(View v) {
+        switch (v.getId()) {
             case R.id.registerHeadline:
                 startActivity(new Intent(this, MainActivity.class));
-                        break;
+                break;
             case R.id.registerButton:
                 registerUser();
+                break;
+            case R.id.loginText:
+                startActivity(new Intent(this, MainActivity.class));
                 break;
         }
     }
 
-    private void registerUser()
-    {
+    private void registerUser() {
         String email = registerEmail.getText().toString().trim();
         String username = registerUsername.getText().toString().trim();
         String password = registerPassword.getText().toString().trim();
         String confirmPassord = registerConfirmPassword.getText().toString().trim();
 
-        if(username.isEmpty()){
+        if (username.isEmpty()) {
             registerUsername.setError("Username is required");
             registerUsername.requestFocus();
             return;
         }
-        if(password.isEmpty()){
+        if (password.isEmpty()) {
             registerPassword.setError("Password is required");
             registerPassword.requestFocus();
             return;
         }
-        if(confirmPassord.isEmpty()){
+        if (confirmPassord.isEmpty()) {
             registerConfirmPassword.setError("Please confirm the password");
             registerConfirmPassword.requestFocus();
             return;
         }
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             registerEmail.setError("Please provide a valid email");
             registerEmail.requestFocus();
             return;
         }
-        if(password.length()<6){
+        if (password.length() < 6) {
             registerPassword.setError("Password needs to be longer than 6 characters");
             registerPassword.requestFocus();
             return;
         }
-        if(!(password.equals(confirmPassord)))
-        {
+        if (!(password.equals(confirmPassord))) {
             registerPassword.setError("Passwords do not match");
             registerConfirmPassword.setError("Passwords do not match");
             registerPassword.requestFocus();
             registerConfirmPassword.requestFocus();
             return;
         }
-        if(email.isEmpty()){
+        if (email.isEmpty()) {
             registerEmail.setError("Email is required");
             registerEmail.requestFocus();
             return;
         }
 
-        progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful())
-                {
-                    User user = new User(username, password);
-                    FirebaseDatabase.getInstance().getReference("Users")
-                            .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user)
-                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful())
-                            {
-                                Toast.makeText(RegisterActivity.this, "User has been registered succesfully!"
-                                        , Toast.LENGTH_LONG).show();
-                                progressBar.setVisibility(View.GONE);
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        progressBar.setVisibility(View.VISIBLE);
+                        User user = new User(username, password);
+                        FirebaseDatabase.getInstance("https://fishingindk-default-rtdb.europe-west1.firebasedatabase.app/").getReference("User")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user)
+                                .addOnCompleteListener(task1 -> {
 
-                            }else{
-                                Toast.makeText(RegisterActivity.this, "Failed to register! Try again!", Toast.LENGTH_LONG).show();
-                                progressBar.setVisibility(View.GONE);
-                            }
-                        }
-                    });
+                                    if (task1.isSuccessful()) {
+                                        Toast.makeText(RegisterActivity.this, "User has been registered succesfully!",Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
 
-                }else {
-                    Toast.makeText(RegisterActivity.this, "Failed to register! Try again!", Toast.LENGTH_LONG).show();
-                    progressBar.setVisibility(View.GONE);
-                }
-            }
-        });
+                                    } else {
+                                        Toast.makeText(RegisterActivity.this, "Failed to register! Try again!", Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
+                                    }
+                                });
+
+                    } else {
+                        Toast.makeText(RegisterActivity.this, "Failed to register! Try again!", Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                    }
+                });
 
     }
 }
