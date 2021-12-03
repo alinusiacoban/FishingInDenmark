@@ -9,3 +9,4 @@ For this reason, I decided to develop an application that lets you see the diffe
  - []As a user, I want to check if I can rent a boat on a specific lake. - unsolved
  - []As a user, I want to add my catches in order to have them stored in the app (fish type, weight and length of it) - solved.
  - []As a user, I want to be able to see my catches records. - solved
+ - []Youtube VIDEO:https://www.youtube.com/watch?v=uIXo9XOhapU
