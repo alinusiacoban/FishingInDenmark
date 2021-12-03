@@ -11,21 +11,42 @@
         <entry key="..\:/FishingInDenmark/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
         <entry key="..\:/FishingInDenmark/app/src/main/res/layout/activity_register.xml" value="0.264" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/drawable/button_background.xml" value="0.27685185185185185" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/drawable/ic_drawer.xml" value="0.1" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/drawable/ic_settings_background.xml" value="0.290625" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/drawable/input_background.xml" value="0.27685185185185185" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/drawable/tab_corners_shape.xml" value="0.1" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/activity_edit_one.xml" value="0.11200000000000002" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/activity_forgot_password.xml" value="0.2" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/activity_introduction_page.xml" value="0.27447916666666666" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/activity_login.xml" value="0.27447916666666666" />
-        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/activity_main.xml" value="0.27447916666666666" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/activity_main2.xml" value="0.22447916666666667" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/activity_main_page.xml" value="0.1" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/activity_profile.xml" value="0.1" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/activity_register.xml" value="0.2" />
-        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_achievement.xml" value="0.14427083333333332" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/activity_scrolling.xml" value="0.27447916666666666" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/content_scrolling.xml" value="0.27447916666666666" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fish_creator_fragment.xml" value="0.264" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fish_fragment.xml" value="0.25" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_achievement.xml" value="0.2" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_achievement2.xml" value="0.2604166666666667" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_dashboard.xml" value="0.25885416666666666" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_drawer.xml" value="0.12239583333333333" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_fish.xml" value="0.10833333333333334" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_item.xml" value="0.27447916666666666" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_item_list.xml" value="0.27447916666666666" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_map.xml" value="0.14427083333333332" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_maps.xml" value="0.19010416666666666" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_notifications.xml" value="0.1" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_notifications_fragments.xml" value="0.27447916666666666" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_picture.xml" value="0.14375" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_profile.xml" value="0.14427083333333332" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/fragment_settings.xml" value="0.14427083333333332" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/layout/recycleview_notif_item.xml" value="0.3580645161290323" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
         <entry key="..\:/ProiectBunAndroid/app/src/main/res/menu/menu2.xml" value="0.1" />
+        <entry key="..\:/ProiectBunAndroid/app/src/main/res/menu/menu_scrolling.xml" value="0.1" />
       </map>
     </option>
   </component>
